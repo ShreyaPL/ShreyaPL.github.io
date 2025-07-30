@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pick and Place with 7-DOF Franka Panda Arm</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <a href="../index.html">← Back to Home</a>
+  <h1>Pick and Place using 7-DOF Franka Panda Arm</h1>
+  
+  <!-- Add relevant project image, e.g., robot arm or demo -->
+  <img src="../images/franka-panda-pick-place.jpg" alt="Franka Panda Pick and Place demo" width="400" />
+  
+  <h2>Project Overview</h2>
+  <p>
+    This project demonstrates the design and implementation of a pick-and-place system using the Franka Emika Panda 7-degree-of-freedom robotic arm. Leveraging forward and inverse kinematics, vision-based block detection, and precision control, the robot performs automated stacking of static and dynamic blocks in both simulation and hardware testing.
+  </p>
+  
+  <h2>Problem Statement</h2>
+  <p>
+    Efficient object manipulation and placement in unstructured environments pose significant challenges due to the complexity of robotic arm kinematics, dynamic object detection, and collision avoidance.
+  </p>
+  
+  <h2>Solution & Technical Approach</h2>
+  <ul>
+    <li>Implemented both forward and inverse kinematics for 7-DOF Franka Panda.</li>
+    <li>Developed camera-based block detection with pose estimation and orientation correction.</li>
+    <li>Designed control logic for safe grasping, precise pick-and-place, and stacking of blocks.</li>
+    <li>Used ROS and C++ for robot control and integration.</li>
+  </ul>
+  
+  <h2>Implementation Highlights</h2>
+  <ul>
+    <li>Applied Denavit-Hartenberg parameters for kinematic modeling.</li>
+    <li>Average multiple sensor readings to improve pose accuracy.</li>
+    <li>Stacked static blocks methodically with collision avoidance using seed configurations for inverse kinematics.</li>
+    <li>Dynamic blocks handled via sweeping detection and repositioning strategy.</li>
+    <li>Repeated testing performed in both simulation and physical hardware setups.</li>
+  </ul>
+  
+  <h2>Results & Impact</h2>
+  <ul>
+    <li>Reduced average pick-and-place transition time for static blocks to approximately 11 seconds per block.</li>
+    <li>Achieved 60% reduction in sorting errors through vision and kinematic tuning.</li>
+    <li>Demonstrated reliable stacking on hardware with minor alignment deviations (~1 cm offset).</li>
+  </ul>
+  
+  <h2>Challenges & Learning</h2>
+  <p>
+    Initial gripper control functions were unreliable, requiring alternative command implementations. Camera APRIL tag detection inconsistencies led to misaligned grasping early on. Adjustments in sweeping strategy and block orientation calculations greatly improved reliability and robustness.
+  </p>
+  
+  <h2>Links & Media</h2>
+  <ul>
+    <li><a href="https://github.com/yourusername/your-franka-panda-pickplace-repo" target="_blank">GitHub Repository</a></li>
+    <!-- Add your demo video link if available -->
+    <!-- <li><a href="https://youtu.be/yourvideoid" target="_blank">Project Demo Video</a></li> -->
+  </ul>
+  
+  <h2>Reflection</h2>
+  <p>
+    This project showcases my ability to integrate advanced robotic kinematics, vision sensing, and control algorithms into a fully operational pick-and-place application using the Franka Panda arm. It highlights my skills in C++, ROS, and real-world automation challenges.
+  </p>
+</body>
+</html>
